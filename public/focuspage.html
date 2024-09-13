@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="../src/moment.js"></script>
+        <link rel="stylesheet" href="calendar_style.css" />
+        <link rel="stylesheet" href="style.css" />
+        <title>FocusPage</title>
+    </head>
+    <body>
+        <section class="weather">
+            <a
+                class="weatherwidget-io"
+                href="https://forecast7.com/fr/47d22n1d55/nantes/"
+                data-label_1="NANTES"
+                data-label_2="WEATHER"
+                data-theme="original"
+                >NANTES WEATHER</a
+            >
+            <script src="../src/meteo.js"></script>
+        </section>
+        <div class="container">
+            <!-- <section id="timeIFrame"></section> -->
+            <div class="time" style="text-align: center; padding: 1em 0">
+                <iframe
+                    src="https://www.zeitverschiebung.net/clock-widget-iframe-v2?language=fr&size=large&timezone=Europe%2FParis"
+                    width="100%"
+                    height="140"
+                    frameborder="0"
+                    seamless
+                ></iframe>
+            </div>
+            <div id="GoogleNav">
+                <form method="GET" action="http://www.google.fr/search" target="_blank">
+                    <table bgcolor="#ffffFF" width="597">
+                        <div class="searchBarContainer" align="center">
+                            <a href="https://google.fr/" target="_blank">
+                                <img
+                                    src="../icons/logo_G.png"
+                                    height="40px"
+                                    width="40px"
+                                    border="none"
+                                    alt="Logo Google"
+                                    align="center"
+                                    target="_blank"
+                                />
+                            </a>
+                            <input type="text" name="q" size="31" maxlength="255" value="" />
+                            <input type="hidden" name="hl" value="fr" />
+                            <input type="submit" name="btnG" value="Recherche Google" />
+                        </div>
+                    </table>
+                </form>
+            </div>
+        </div>
+        <div id="listCalendarContainer">
+            <section class="toDoList">
+                <div class="toDoContainer">
+                    <h1>To do list</h1>
+                    <div id="displayEntries"></div>
+                    <div id="newEntry">
+                        <input type="text" id="entry" />
+                        <button id="AddButton">Ajouter une tâche</button>
+                    </div>
+                </div>
+            </section>
+            <div></div>
+            <section class="calendarContainer"><div id="calendar" class="calendar"></div></section>
+        </div>
+
+        <!-- rip -->
+        <section class="infoRAM"></section>
+        <!-- rip -->
+
+        <footer class="contributors">
+            © 2024 | Copyright |
+            <a href="https://github.com/Julien8387" target="_blank">Julien</a>,
+            <a href="https://github.com/ElodieGuyard" target="_blank">Elodie</a> &
+            <a href="https://github.com/nathanc8" target="_blank">Nathan</a>
+        </footer>
+    </body>
+    <script type="module" src="../dist/array_to_do_list.js"></script>
+    <script src="../dist/popup.js"></script>
+    <script src="../src/calendar.js"></script>
+</html>
